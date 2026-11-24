@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PranaCare Multi-Speciality Hospital — Healthcare &amp; Medical Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Emergency Top Strip -->
+  <div class="emergency-strip">
+    <div class="container strip-content">
+      <span><strong>24/7 Emergency &amp; Trauma:</strong> +91 40 2345 9108</span>
+      <span><strong>Ambulance Helpline:</strong> 108 / +91 1800-108-7726</span>
+      <a href="#emergency" class="strip-link">All Emergency Contacts &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#top" class="brand">
+        <span class="brand-cross">+</span>
+        <div>
+          <span class="brand-name">Prana<span>Care</span></span>
+          <small class="brand-sub">Multi-Speciality Hospital</small>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about">About</a>
+        <a href="#departments">Departments</a>
+        <a href="#doctors">Doctors</a>
+        <a href="#services">Services</a>
+        <a href="#health-info">Health Info</a>
+        <a href="#emergency">Emergency</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" id="myAppointmentsBtn" class="btn-outline-sm">
+          My Bookings <span id="bookingCount" class="badge">0</span>
+        </button>
+        <a href="#appointment" class="btn btn-primary btn-sm">Book Appointment</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero & Hospital Information -->
+    <section class="hero" id="about">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="pill-badge">NABH &amp; NABL ACCREDITED • 24/7 CARE</span>
+          <h1>Compassionate care.<br /><span>Advanced medicine.</span></h1>
+          <p class="hero-lead">
+            PranaCare Multi-Speciality Hospital combines 350+ beds, robotic surgical suites, and
+            board-certified specialists across 18 clinical departments to deliver trusted healthcare
+            for every stage of life.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#appointment" class="btn btn-primary">Book an Appointment</a>
+            <a href="#doctors" class="btn btn-secondary">Find a Doctor</a>
+          </div>
+
+          <div class="hospital-stats">
+            <div class="stat-box">
+              <strong>350+</strong>
+              <span>Hospital Beds</span>
+            </div>
+            <div class="stat-box">
+              <strong>85+</strong>
+              <span>Senior Specialists</span>
+            </div>
+            <div class="stat-box">
+              <strong>24/7</strong>
+              <span>Trauma &amp; ICU</span>
+            </div>
+            <div class="stat-box">
+              <strong>1.2L+</strong>
+              <span>Patients Treated</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img src="assets/hospital-hero.svg" alt="PranaCare Multi-Speciality Hospital Building" />
+          <div class="visiting-card">
+            <div>
+              <strong>OPD Hours</strong>
+              <span>Mon – Sat: 8:00 AM – 8:00 PM</span>
+            </div>
+            <div>
+              <strong>Location</strong>
+              <span>Health City, Banjara Hills, Hyderabad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section class="section" id="departments">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">CENTRES OF EXCELLENCE</span>
+          <h2 class="section-title">Clinical Departments</h2>
+          <p class="section-desc">Select any department to filter our specialists and view available care.</p>
+        </div>
+
+        <div class="departments-grid" id="departmentsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Doctor Profiles Section -->
+    <section class="section section-alt" id="doctors">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">MEET OUR SPECIALISTS</span>
+          <h2 class="section-title">Doctor Profiles</h2>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+          <input
+            type="text"
+            id="doctorSearch"
+            placeholder="Search doctor by name or speciality..."
+            aria-label="Search doctors"
+          />
+          <select id="departmentFilter" aria-label="Filter by department">
+            <option value="all">All Departments</option>
+          </select>
+        </div>
+
+        <div class="doctors-grid" id="doctorsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Medical Services Section -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">COMPREHENSIVE CARE</span>
+          <h2 class="section-title">Medical Services &amp; Facilities</h2>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">&#128657;</div>
+            <h3>24/7 Emergency &amp; Trauma</h3>
+            <p>GPS-enabled ACLS ambulances, rapid triage bays, and round-the-clock trauma surgeons.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">&#128300;</div>
+            <h3>NABL Diagnostic Lab</h3>
+            <p>3-Tesla MRI, 128-slice CT, digital pathology, and same-day online lab reports.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">&#128138;</div>
+            <h3>24-Hour Pharmacy</h3>
+            <p>In-house licensed pharmacy stocked with genuine prescription and critical-care medicines.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">&#128187;</div>
+            <h3>Video Teleconsultation</h3>
+            <p>Consult senior doctors from home with digital prescriptions and follow-up support.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">&#10084;</div>
+            <h3>Preventive Health Checkups</h3>
+            <p>Tailored Full-Body, Cardiac, Diabetic, and Senior Citizen screening packages from ₹1,999.</p>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">&#127973;</div>
+            <h3>Cashless Insurance Desk</h3>
+            <p>Dedicated TPA desk supporting 40+ major health insurance providers and Ayushman Bharat.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Appointment Booking Section -->
+    <section class="section section-alt" id="appointment">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">ONLINE SCHEDULING</span>
+          <h2 class="section-title">Book an Appointment</h2>
+          <p class="section-desc">Instant confirmation for in-person OPD visits and video consultations.</p>
+        </div>
+
+        <div class="booking-layout">
+          <form id="appointmentForm" class="booking-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="patientName">Patient Full Name *</label>
+                <input type="text" id="patientName" placeholder="e.g., Ramesh Kumar" required />
+              </div>
+              <div class="form-group">
+                <label for="patientPhone">Mobile Number *</label>
+                <input type="tel" id="patientPhone" placeholder="+91 98765 43210" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bookDepartment">Department *</label>
+                <select id="bookDepartment" required></select>
+              </div>
+              <div class="form-group">
+                <label for="bookDoctor">Preferred Doctor *</label>
+                <select id="bookDoctor" required></select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bookDate">Appointment Date *</label>
+                <input type="date" id="bookDate" required />
+              </div>
+              <div class="form-group">
+                <label for="bookSlot">Time Slot *</label>
+                <select id="bookSlot" required>
+                  <option value="09:30 AM">09:30 AM (Morning)</option>
+                  <option value="11:00 AM">11:00 AM (Morning)</option>
+                  <option value="02:00 PM">02:00 PM (Afternoon)</option>
+                  <option value="04:30 PM">04:30 PM (Evening)</option>
+                  <option value="06:30 PM">06:30 PM (Evening)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="visitType">Consultation Type</label>
+              <select id="visitType">
+                <option value="In-Person OPD">In-Person Hospital Visit</option>
+                <option value="Video Teleconsultation">Video Teleconsultation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="patientNotes">Symptoms / Notes (Optional)</label>
+              <textarea id="patientNotes" rows="3" placeholder="Briefly describe your reason for visit..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary full-width">Confirm Appointment</button>
+            <div id="bookingFeedback" class="feedback-box hidden"></div>
+          </form>
+
+          <aside class="booking-info">
+            <div class="info-card">
+              <h3>Before Your Visit</h3>
+              <ul>
+                <li>Carry previous prescriptions, diagnostic reports, and a valid government ID.</li>
+                <li>Arrive 15 minutes prior to your scheduled OPD time slot.</li>
+                <li>Consultation fees range between ₹500 and ₹900 depending on speciality.</li>
+              </ul>
+            </div>
+
+            <!-- Interactive Quick BMI Calculator -->
+            <div class="info-card bmi-card">
+              <h3>Quick BMI Health Check</h3>
+              <p class="small-muted">Check your Body Mass Index before your wellness consultation.</p>
+              <div class="bmi-inputs">
+                <div>
+                  <label for="bmiHeight">Height (cm)</label>
+                  <input type="number" id="bmiHeight" placeholder="170" min="80" max="240" />
+                </div>
+                <div>
+                  <label for="bmiWeight">Weight (kg)</label>
+                  <input type="number" id="bmiWeight" placeholder="68" min="20" max="250" />
+                </div>
+              </div>
+              <button type="button" id="calcBmiBtn" class="btn btn-secondary full-width">Calculate BMI</button>
+              <div id="bmiResult" class="bmi-result hidden"></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Health Information & Articles -->
+    <section class="section" id="health-info">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">PATIENT EDUCATION</span>
+          <h2 class="section-title">Health Information &amp; Wellness Guides</h2>
+        </div>
+
+        <div class="articles-grid" id="articlesGrid"></div>
+      </div>
+    </section>
+
+    <!-- Emergency Contacts Section -->
+    <section class="section emergency-section" id="emergency">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow light">IMMEDIATE ASSISTANCE</span>
+          <h2 class="section-title light">24/7 Emergency Contacts</h2>
+          <p class="section-desc light">For life-threatening emergencies, call immediately or visit Gate 1 Emergency Entry.</p>
+        </div>
+
+        <div class="emergency-grid">
+          <div class="emergency-card">
+            <span class="em-tag">AMBULANCE</span>
+            <h3>108 / +91 40 2345 9108</h3>
+            <p>24/7 Cardiac &amp; Trauma ACLS Ambulance dispatch within 15 minutes.</p>
+            <a href="tel:108" class="btn btn-danger">Call 108 Now</a>
+          </div>
+
+          <div class="emergency-card">
+            <span class="em-tag">EMERGENCY &amp; TRAUMA DESK</span>
+            <h3>+91 40 2345 9111</h3>
+            <p>Direct line to Casualty Medical Officer for accident, stroke, and chest pain alerts.</p>
+            <a href="tel:+914023459111" class="btn btn-light">Call Trauma Desk</a>
+          </div>
+
+          <div class="emergency-card">
+            <span class="em-tag">BLOOD BANK (24×7)</span>
+            <h3>+91 40 2345 9222</h3>
+            <p>Licensed component blood bank with whole blood, platelets, and plasma support.</p>
+            <a href="tel:+914023459222" class="btn btn-light">Call Blood Bank</a>
+          </div>
+
+          <div class="emergency-card">
+            <span class="em-tag">NATIONAL HELPLINES</span>
+            <h3>112 (Emergency) • 104 (Health)</h3>
+            <p>National unified emergency response (112) and 24/7 medical advice helpline (104).</p>
+            <a href="tel:112" class="btn btn-light">Call 112</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Health Article Reader Modal -->
+  <div id="articleModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="articleModalTitle">
+    <div class="modal-backdrop" id="closeArticleBackdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="articleModalTitle"></h3>
+        <button type="button" id="closeArticleBtn" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div id="articleModalMeta" class="modal-meta"></div>
+      <div id="articleModalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Saved Appointments Drawer -->
+  <div id="bookingsModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="bookingsModalTitle">
+    <div class="modal-backdrop" id="closeBookingsBackdrop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="bookingsModalTitle">Your Booked Appointments</h3>
+        <button type="button" id="closeBookingsBtn" class="close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div id="bookingsList" class="bookings-list"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2026 PranaCare Multi-Speciality Hospital. Built with HTML, CSS &amp; JavaScript.</p>
+      <a href="#top">Back to top &uarr;</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
